@@ -33,13 +33,12 @@ public class BinarySearchTree <Key extends Comparable<Key>, Value> {
     //sets left/right or creates a new node appropriately, returns the
     //modified node n
     private Node<Key, Value> put(Node<Key, Value> n, Key key, Value val) {
-        int temp = key.compareTo(n.getKey());
         if (n == null){
-            return new Node<>(key,val,0);
+            return new Node<>(key,val,1);
         }
-        if (temp > 0){
+        if (n.getKey().compareTo(key) > 0){
             n.setLeft(put(n.getLeft(),key,val));
-        } else if (temp < 0){
+        } else if (n.getKey().compareTo(key) < 0){
             n.setRight(put(n.getRight(),key,val));{
             }
         } else {
