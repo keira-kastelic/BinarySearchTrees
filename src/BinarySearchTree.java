@@ -40,7 +40,7 @@ public class BinarySearchTree <Key extends Comparable<Key>, Value> {
         if (temp > 0){
             n.setLeft(put(n.getLeft(),key,val));
         } else if (temp < 0){
-            n.setRight(put(n.getRight(),key,val)){
+            n.setRight(put(n.getRight(),key,val));{
             }
         } else {
             return n;
@@ -118,7 +118,7 @@ public class BinarySearchTree <Key extends Comparable<Key>, Value> {
         if (n.getRight() == null){
             return n;
         } else {
-            this.max(n.getRight());
+            return this.max(n.getRight());
         }
     }
 
